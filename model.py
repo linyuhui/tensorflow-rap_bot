@@ -113,12 +113,6 @@ class Model(object):
                                              feed_dict={
                                                  eval_model.input_placeholder: '必 须'
                                              })
-        print(output_word)
-        print(output_word.shape)
-        print(output_id.shape)
-        print(probas.shape)
-        print(type(state))
-        print(output_id)
         time_steps = output_id.shape[0]
         for time_step in range(time_steps):
             all_output_ids.append(output_word[time_step])
